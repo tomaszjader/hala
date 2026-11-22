@@ -1,0 +1,14 @@
+node_modules/
+dist/
+artifacts/
+.playwright-mcp/
+.vite/
+.env
+.env.*
+!.env.example
+*.log
+*.local
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

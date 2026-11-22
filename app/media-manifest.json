@@ -1,0 +1,48 @@
+{
+  "description": "Fotograficzne wizualizacje AI inspirowane latem w Tatrach. Nie dokumentuja konkretnych osob ani miejsca.",
+  "images": [
+    {
+      "asset": "hero-summer",
+      "model": "gpt_image_2_6",
+      "quality": "xhigh",
+      "resolution": "2k"
+    },
+    {
+      "asset": "shepherd-summer",
+      "model": "gpt_image_2_6",
+      "quality": "xhigh",
+      "resolution": "2k"
+    },
+    {
+      "asset": "pasture-summer",
+      "model": "gpt_image_2_6",
+      "quality": "xhigh",
+      "resolution": "2k"
+    },
+    {
+      "asset": "join-summer",
+      "model": "gpt_image_2_6",
+      "quality": "xhigh",
+      "resolution": "2k"
+    }
+  ],
+  "videos": [
+    {
+      "asset": "hero-summer",
+      "model": "kling4_0",
+      "resolution": "1080p",
+      "duration_seconds": 5
+    },
+    {
+      "asset": "pasture-summer",
+      "model": "kling4_0",
+      "resolution": "1080p",
+      "duration_seconds": 5
+    }
+  ],
+  "cultural_references": [
+    "https://muzeum.tychy.pl/eksponat-wirtualny/stroj-gorali-podhalanskich-2/",
+    "https://muzeumtatrzanskie.pl/edukacja/mlodziez/tajemnice-malowanej-skrzyni/"
+  ],
+  "preparation": "scripts/prepare-documentary-media.py; silent all-intra H.264, exact-frame posters."
+}
