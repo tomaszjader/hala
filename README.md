@@ -44,3 +44,6 @@ Obrazy wygenerowano przez Higgsfield modelem GPT Image 2.6, a filmy modelem Klin
 To strona koncepcyjna, nie oficjalna rekrutacja. Formularz przygotowuje szkic e-maila w programie pocztowym. Nie zapisuje danych i nie wysyła wiadomości automatycznie.
 
 Oryginały robocze, dawne generacje, zrzuty ekranu i zależności lokalne nie są publikowane w repozytorium.
+## Wersja angielska na Netlify
+
+`/en` i `/en/` otwierają angielską wersję strony. Parametr `?lang=en` również wymusza angielski, a `?lang=pl` polski. Bez wyboru języka strona główna pozostaje po polsku. Przekierowania w `netlify.toml` obsługują bezpośrednie wejście i odświeżanie `/en`.

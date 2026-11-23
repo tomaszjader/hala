@@ -1,3 +1,4 @@
+import { t } from "@/i18n";
 import { assetUrl } from "@/assets";
 import type { ScrollScrubScene, ScrollScrubTheme } from "@/components/scroll-scrub/scroll-scrub";
 
@@ -11,14 +12,14 @@ export const scrollScrubTheme: ScrollScrubTheme = {
 export const scrollScrubScenes: ScrollScrubScene[] = [
   {
     id: "poczatek",
-    label: "Poznaj Tatry",
+    label: t("Poznaj Tatry"),
     poster: assetUrl("assets/world/scene-01-poster.png"),
     mobilePoster: assetUrl("assets/world/scene-01-mobile-poster.png"),
     clip: assetUrl("assets/world/scene-01.mp4"),
     mobileClip: assetUrl("assets/world/scene-01-mobile.mp4"),
-    kicker: "ZAWÓD, KTÓRY MA KORZENIE",
-    title: "Twoje miejsce jest tutaj.",
-    body: "Zamień codzienny pośpiech na rytm gór. Poznaj życie pasterza pośród tatrzańskich hal.",
+    kicker: t("ZAWÓD, KTÓRY MA KORZENIE"),
+    title: t("Twoje miejsce jest tutaj."),
+    body: t("Zamień codzienny pośpiech na rytm gór. Poznaj życie pasterza pośród tatrzańskich hal."),
     scroll: 2.8,
     linger: 0.08,
     objectPosition: "62% center",

@@ -1,0 +1,85 @@
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const path = window.location.pathname.replace(/\/$/, "");
+const language = new URLSearchParams(window.location.search).get("lang");
+export const isEnglish = language === "en" || (language !== "pl" && path === `${base}/en`);
+const translations: Record<string, string> = {
+  "Odkryj tę drogę": "Explore this path",
+  "Hala. Strona główna": "Hala. Home",
+  "Film o życiu na tatrzańskiej hali": "A film about life in the Tatra mountain pastures",
+  "POCZUJ TĘ PRZESTRZEŃ": "FEEL THE OPEN SPACE",
+  "Każdy krok": "Every step",
+  "bliżej ": "closer to ",
+  "natury.": "nature.",
+  "Lato na hali. W rytmie stada.": "Summer in the pastures. In rhythm with the flock.",
+  "Podaj imię, aby przygotować wiadomość.": "Enter your name to prepare a message.",
+  "Podaj poprawny adres e-mail.": "Enter a valid email address.",
+  "Zainteresowanie pasterstwem w Tatrach": "Interested in shepherding in the Tatras",
+  "Nawigacja główna": "Main navigation",
+  "O zawodzie": "The craft",
+  "Codzienność": "Daily life",
+  "Jak zacząć": "Getting started",
+  "Dołącz do nas": "Join us",
+  "Zamknij menu": "Close menu",
+  "Otwórz menu": "Open menu",
+  "TATRY / PODHALE / TRADYCJA": "TATRAS / PODHALE / TRADITION",
+  "Więcej niż praca": "More than a job",
+  "Nie każdy dzień musi wyglądać ": "Every day can be ",
+  "tak samo.": "different.",
+  "Poranki z widokiem na szczyty. Stado, które znasz po głosie. Wiedza przekazywana przez pokolenia. Pasterstwo to życie bliżej tego, co naprawdę ważne.": "Mornings overlooking the peaks. A flock you know by its voices. Knowledge passed down through generations. Shepherding brings you closer to what really matters.",
+  "Zobacz, jak wygląda dzień": "Discover a day in the pastures",
+  "Ilustracyjny kadr pasterza w stroju podhalańskim przy owcach na słonecznej letniej hali": "Illustration of a shepherd in traditional Podhale clothing with sheep in a sunny summer pasture",
+  "01 / CODZIENNOŚĆ NA HALI": "01 / DAILY LIFE IN THE PASTURES",
+  "TWÓJ NOWY RYTM": "YOUR NEW RHYTHM",
+  "Życie, które czuć wszystkimi zmysłami.": "Life you can feel with every sense.",
+  "Świeże powietrze o świcie, dźwięk dzwonków, smak tradycji. Każdy dzień stawia nowe wyzwania i daje coś, czego nie znajdziesz za biurkiem.": "Fresh air at dawn, the sound of bells, a taste of tradition. Every day brings new challenges and something you cannot find behind a desk.",
+  "Praca na świeżym powietrzu": "Working in the fresh air",
+  "Bliskość gór i przyrody": "Close to mountains and nature",
+  "Rzemiosło z pokolenia na pokolenie": "A craft passed down through generations",
+  "Tu rytm dnia": "Here, the rhythm of the day",
+  "wyznacza ": "is set by ",
+  "stado.": "the flock.",
+  "WYPAS. OPIEKA. CODZIENNA OBECNOŚĆ.": "GRAZING. CARE. BEING THERE EVERY DAY.",
+  "OD CIEKAWOŚCI DO PIERWSZEJ HALI": "FROM CURIOSITY TO YOUR FIRST PASTURE",
+  "Każda przygoda ma swój początek.": "Every adventure starts somewhere.",
+  "Nie musisz znać wszystkich tajników wypasu. Najważniejsze są ciekawość, szacunek do zwierząt i gotowość do nauki.": "You do not need to know every secret of shepherding. What matters most is curiosity, respect for animals and a willingness to learn.",
+  "Odkryj pasterstwo": "Discover shepherding",
+  "Poznaj rytm sezonu, górskie zwyczaje i realia codziennej pracy.": "Discover the rhythm of the season, mountain traditions and the realities of daily work.",
+  "Porozmawiaj z praktykami": "Talk to experienced shepherds",
+  "Zapytaj o wymagania, doświadczenie i możliwości przyuczenia.": "Ask about requirements, experience and opportunities to learn on the job.",
+  "Postaw pierwszy krok": "Take the first step",
+  "Poszukaj sezonowej okazji do nauki u doświadczonego bacy.": "Look for a seasonal opportunity to learn from an experienced master shepherd.",
+  "Ilustracyjny widok słonecznej letniej hali ze ścieżką, owcami i drewnianą bacówką": "Illustration of a sunny summer pasture with a path, sheep and a wooden shepherd’s hut",
+  "Lato na Podhalu / wizualizacja": "Summer in Podhale / illustration",
+  "HALA. / BLISKO TEGO, CO WAŻNE": "HALA. / CLOSE TO WHAT MATTERS",
+  "MOŻE TO TWOJA DROGA?": "COULD THIS BE YOUR PATH?",
+  "Góry czekają.": "The mountains are calling.",
+  "A Ty?": "Will you answer?",
+  "Przygotuj wiadomość wyrażającą zainteresowanie pasterstwem. Otworzymy ją w Twoim programie pocztowym.": "Prepare a message about your interest in shepherding. We will open it in your email app.",
+  "Twoje imię": "Your name",
+  "Jak masz na imię?": "What is your name?",
+  "Adres e-mail": "Email address",
+  "twoj@email.pl": "you@example.com",
+  "Kilka słów o sobie": "A few words about yourself",
+  "(opcjonalnie)": "(optional)",
+  "Co przyciąga Cię do życia w górach?": "What draws you to life in the mountains?",
+  "Otwórz ponownie e-mail": "Reopen email",
+  "Przygotuj wiadomość": "Prepare message",
+  "Wiadomość została przygotowana w programie pocztowym. Wybierz odbiorcę i wyślij ją samodzielnie.": "Your message is ready in your email app. Choose a recipient and send it yourself.",
+  "To demonstracyjna strona informacyjna, nie oficjalna rekrutacja. Nie zapisujemy Twoich danych.": "This is a concept information page, not an official recruitment campaign. We do not store your data.",
+  "Góry. Owce. Tradycja.": "Mountains. Sheep. Tradition.",
+  "Projekt koncepcyjny. Wizualizacje i filmy AI. © ": "Concept project. AI images and films. © ",
+  "Powrót na górę": "Back to top",
+  "Poznaj Tatry": "Discover the Tatras",
+  "ZAWÓD, KTÓRY MA KORZENIE": "A CRAFT WITH DEEP ROOTS",
+  "Twoje miejsce jest tutaj.": "This is where you belong.",
+  "Zamień codzienny pośpiech na rytm gór. Poznaj życie pasterza pośród tatrzańskich hal.": "Trade the daily rush for the rhythm of the mountains. Discover a shepherd’s life in the Tatra pastures."
+};
+export const t = (polish: string): string => isEnglish ? translations[polish] ?? polish : polish;
+
+document.documentElement.lang = isEnglish ? "en" : "pl";
+if (isEnglish) {
+  document.title = "HALA. Become a shepherd in the Tatras";
+  document.querySelector('meta[name="description"]')?.setAttribute("content", "Trade the daily rush for the rhythm of the mountains. Discover shepherding, tradition and life in the Tatra pastures.");
+  document.querySelector('meta[property="og:locale"]')?.setAttribute("content", "en_GB");
+  for (const selector of ['meta[property="og:title"]', 'meta[name="twitter:title"]']) document.querySelector(selector)?.setAttribute("content", document.title);
+}

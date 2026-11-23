@@ -7,3 +7,14 @@
   NODE_VERSION = "24"
   BUN_VERSION = "1.4.4"
   SITE_BASE_PATH = "/"
+
+# Serve the React app for direct visits and refreshes of the English URL.
+[[redirects]]
+  from = "/en"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/"
+  to = "/index.html"
+  status = 200
